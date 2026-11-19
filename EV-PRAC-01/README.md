@@ -1,4 +1,4 @@
-# EV-SUM-01 — Evaluación sumativa de la Unidad I
+# EV-PRAC-01 — Evaluación de la Unidad I
 
 **Tema:** EV-PRAC-01 - SUM - Proceso de requisitos y el framework de IR. Resolver el problema  
 **Código de entrega en el SGA:** EV-SUM-01  
@@ -20,7 +20,7 @@ La evaluación de la Unidad I aborda los conceptos de requisitos, los documentos
 ## Estructura de archivos
 
 ```text
-EV-SUM-01/
+EV-PRAC-01/
 ├── README.md             # Documentación de la actividad
 ├── evidencias/
 │   ├── hoja-01.jpg       # Primera hoja manuscrita
@@ -36,8 +36,8 @@ El archivo `evidencias/.gitkeep` es un marcador técnico de la carpeta y no form
 ## Reproducción del PDF desde LaTeX
 
 - **Compilador:** pdfLaTeX (`pdflatex`).
-- **Archivo principal:** `EV-SUM-01/main.tex`.
-- **Archivo generado:** `EV-SUM-01/main.pdf`.
+- **Archivo principal:** `EV-PRAC-01/main.tex`.
+- **Archivo generado:** `EV-PRAC-01/main.pdf`.
 - **Dependencia de imagen:** `logoband.png` debe estar junto a `main.tex`.
 - **Distribución LaTeX:** TeX Live o MiKTeX con los paquetes empleados por el documento.
 - **Paquetes utilizados:** `inputenc`, `fontenc`, `helvet`, `geometry`, `graphicx`, `array`, `tabularx`, `longtable`, `pdflscape`, `colortbl`, `xcolor`, `enumitem`, `fancyhdr`, `lastpage`, `tcolorbox` con la biblioteca `most`, `amsmath`, `url`, `needspace`, `caption` e `hyperref`. 
@@ -45,7 +45,7 @@ El archivo `evidencias/.gitkeep` es un marcador técnico de la carpeta y no form
 Desde la raíz del repositorio, ejecutar **en este orden**:
 
 ```bash
-cd EV-SUM-01
+cd EV-PRAC-01
 pdflatex -interaction=nonstopmode -halt-on-error main.tex
 pdflatex -interaction=nonstopmode -halt-on-error main.tex
 ```
