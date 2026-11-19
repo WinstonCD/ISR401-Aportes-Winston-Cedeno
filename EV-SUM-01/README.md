@@ -1,51 +1,48 @@
 # EV-SUM-01 — Evaluación sumativa de la Unidad I
 
+**Tema:** EV-PRAC-01 - SUM - Proceso de requisitos y el framework de IR. Resolver el problema  
+**Código de entrega en el SGA:** EV-SUM-01  
+**Código de la guía de la prueba escrita:** EV-PRAC-01  
+**Cuestionario en línea:** EV-CUE-01  
+**Caso de estudio:** Sistema de alerta temprana de crecidas «ALERTARÍO»  
+**Estudiante:** Cedeño Avila Winston Damian  
 **Universidad:** Universidad Técnica Estatal de Quevedo (UTEQ)  
-**Asignatura:** Ingeniería de Requisitos (ISR-401)  
-**Estudiante:** Winston Damian Cedeño Avila  
-**Nivel y paralelo:** 4.º «B»  
-**Período:** 2026–2027 SPA  
-**Caso de estudio:** ALERTARÍO
+**Asignatura:** Ingeniería de Requerimientos (ISR-401)  
+**Nivel y paralelo:** Cuarto nivel, paralelo B  
+**Período académico:** 2026–2027 SPA  
+**Fecha de la sesión:** 18 de noviembre de 2026  
+**Cierre de la entrega:** 18 de noviembre de 2026, 23:59 (SGA)
 
-## Descripción
+## Contenido
 
-Evaluación individual de los fundamentos de Ingeniería de Requisitos de las semanas 1 a 3: identificación, clasificación, calidad y formulación de requisitos, proceso de requisitos, estándares y documentos StRS, SyRS y SRS.
+La evaluación de la Unidad I aborda los conceptos de requisitos, los documentos StRS/SyRS/SRS, el proceso de Ingeniería de Requisitos y la clasificación y calidad de los requisitos aplicados al caso ALERTARÍO. La documentación digital respeta el contenido de las hojas manuscritas, sin completar respuestas fuera de ellas.
 
-## Estado
-
-**Pendiente de evidencias y transcripción fiel.** La creación de esta carpeta y README no equivale a la entrega de la evaluación.
-
-## Estructura prevista
+## Estructura de archivos
 
 ```text
 EV-SUM-01/
-├── README.md
+├── README.md             # Documentación de la actividad
 ├── evidencias/
-│   ├── hoja-01.jpg
-│   └── hoja-02.jpg
-├── main.tex
-└── main.pdf
+│   ├── hoja-01.jpg       # Primera hoja manuscrita
+│   ├── hoja-02.jpg       # Segunda hoja manuscrita
+│   └── hoja-03.jpg       # Tercera hoja manuscrita
+├── main.tex              # Archivo principal de la transcripción LaTeX
+├── main.pdf              # Resultado compilado del archivo principal
+└── logoband.png          # Encabezado gráfico usado por main.tex
 ```
 
-Los nombres de fotografías son ilustrativos; se agregarán tantos archivos como hojas originales existan. No se incluyen las fotos dentro de `main.pdf`.
+El archivo `evidencias/.gitkeep` es un marcador técnico de la carpeta y no forma parte de las respuestas. Las fotografías originales permanecen en `evidencias/` y **no se insertan en `main.pdf`**.
 
-## Procedimiento de digitalización
+## Reproducción del PDF desde LaTeX
 
-1. **Después de entregar la prueba escrita**, fotografiar las hojas completas en presencia del docente, según la guía.
-2. Subir primero las fotografías a `evidencias/` en un commit independiente.
-3. Transcribir en `main.tex` exactamente lo escrito a mano, respetando el orden, la numeración, los errores originales y las tablas. No transcribir los tachones, no añadir ni mejorar respuestas.
-4. Incluir al comienzo la declaración de transcripción fiel exigida por la guía, con la fecha real.
-5. Compilar `main.pdf` y comparar la versión digital con las fotografías originales.
-6. Registrar la transcripción y el PDF en un segundo commit o en varios posteriores.
+- **Compilador:** pdfLaTeX (`pdflatex`).
+- **Archivo principal:** `EV-SUM-01/main.tex`.
+- **Archivo generado:** `EV-SUM-01/main.pdf`.
+- **Dependencia de imagen:** `logoband.png` debe estar junto a `main.tex`.
+- **Distribución LaTeX:** TeX Live o MiKTeX con los paquetes empleados por el documento.
+- **Paquetes utilizados:** `inputenc`, `fontenc`, `helvet`, `geometry`, `graphicx`, `array`, `tabularx`, `longtable`, `pdflscape`, `colortbl`, `xcolor`, `enumitem`, `fancyhdr`, `lastpage`, `tcolorbox` con la biblioteca `most`, `amsmath`, `url`, `needspace`, `caption` e `hyperref`. 
 
-## Compilación de LaTeX
-
-**Compilador previsto:** pdfLaTeX (`pdflatex`).  
-**Archivo principal:** `main.tex`.  
-**Archivo de salida:** `main.pdf`.  
-**Entorno:** TeX Live o MiKTeX con pdfLaTeX.
-
-Desde la raíz del repositorio:
+Desde la raíz del repositorio, ejecutar **en este orden**:
 
 ```bash
 cd EV-SUM-01
@@ -53,20 +50,26 @@ pdflatex -interaction=nonstopmode -halt-on-error main.tex
 pdflatex -interaction=nonstopmode -halt-on-error main.tex
 ```
 
-**Pendiente de verificación:** todavía no existe `main.tex` en esta carpeta. Al incorporar la transcripción se confirmarán la compilación, los paquetes LaTeX necesarios y los comandos definitivos, y se actualizará esta sección.
+La primera ejecución genera el PDF y la segunda actualiza el total de páginas empleado en el pie. Este `main.tex` **no requiere BibTeX ni archivo `referencias.bib`**.
 
-## Entrega en el SGA
+Comprobar que `main.pdf` puede abrirse y que reproduce las respuestas de las tres fotografías. Los contenidos manuscritos, incluidos los errores presentes en los originales, no deben corregirse como parte de la transcripción.
 
-Según la guía de evaluación completa, además de la digitalización en el repositorio, se debe subir al SGA un PDF **de una sola página** con:
+## Registro de evidencias y transcripción
 
-- Datos del estudiante, asignatura, nivel y paralelo
-- Código y nombre de la evaluación
-- Fecha de la sesión y fecha límite
-- URL completa del repositorio en una sola línea
-- Captura del resumen del cuestionario SGA con los datos requeridos
+Las fotografías deben conservar sus nombres `hoja-01.jpg`, `hoja-02.jpg`, `hoja-03.jpg`, en ese orden. La guía establece separar el commit de evidencias del commit que incorpora la transcripción LaTeX, de modo que pueda comprobarse el desarrollo escrito antes de su digitalización.
+
+## Entrega al SGA
+
+La entrega en el SGA consiste en un **PDF independiente de una página**, con:
+
+1. Apellidos y nombres completos, asignatura, nivel y paralelo.
+2. Código y nombre de la evaluación.
+3. Fecha de la sesión y fecha límite: **18/11/2026, 23:59**.
+4. URL del repositorio personal, completa y visible en una sola línea.
+5. Captura del resumen del cuestionario con identificación del estudiante, datos de la prueba y calificación global.
 
 **Repositorio:** https://github.com/WinstonCD/ISR401-Aportes-Winston-Cedeno
 
-## Integridad y referencias
+La captura elegida para la carátula procede de la pantalla «Revisión de intento» del cuestionario y muestra la calificación **5,67/10**. `EV-CUE-01` es el código del cuestionario en línea y **no constituye un nombre de archivo obligatorio para la imagen**.
 
-La transcripción será una reproducción fiel del manuscrito, no una corrección posterior. La guía cita ISO/IEC/IEEE 29148:2018, ISO/IEC 25010:2023, SWEBOK v4.0 y Pohl como referencias de la evaluación.
+La guía exige también la entrega previa de las actividades formativas vinculadas **GA-TL-01** y **GA-PRAC-01**, así como la digitalización fiel y la entrega dentro del plazo indicado.
