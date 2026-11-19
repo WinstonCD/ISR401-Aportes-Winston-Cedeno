@@ -1,0 +1,159 @@
+% EV-SUM-01 — TRANSCRIPCIÓN FIEL DE LAS HOJAS MANUSCRITAS
+% PRESENTACIÓN BASADA EN EL FORMATO DE LA GUÍA DEL DOCENTE.
+% El contenido reproduce el borrador de transcripción anterior;
+% no se completan ni corrigen respuestas de las hojas manuscritas.
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+% Mantener el formato original sin babel
+\usepackage[scaled]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[a4paper,top=2.6cm,bottom=2.3cm,left=2cm,right=2cm,headheight=34pt]{geometry}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{pdflscape}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{needspace}
+\usepackage[hypcap=false]{caption}
+\usepackage[hidelinks]{hyperref}
+\renewcommand{\tablename}{Tabla}
+
+% --- Paleta de la guía original ---
+\definecolor{utegreen}{HTML}{0B7A3B}
+\definecolor{utegreendk}{HTML}{075C2C}
+\definecolor{midblue}{HTML}{1F5C8B}
+\definecolor{gold}{HTML}{D4A017}
+\definecolor{rowgray}{HTML}{EFEFEF}
+\definecolor{boxgray}{HTML}{F4F6F4}
+\definecolor{lightred}{HTML}{FBEAEA}
+\definecolor{lightgold}{HTML}{FBF3DC}
+\definecolor{lightblue}{HTML}{EAF1F7}
+\definecolor{lightgreen}{HTML}{DCEFE3}
+
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\footnotesize UTEQ \,$\cdot$\, Ingeniería de Requerimientos (ISR-401) \,$\cdot$\, SPA 2026--2027}
+\setlength{\headwidth}{\textwidth}
+\rhead{\footnotesize EV-SUM-01 \,$\cdot$\, Paralelo B}
+\lfoot{\footnotesize Winston Damian Cedeño Avila}
+\rfoot{\footnotesize Página \thepage\ de \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlength{\emergencystretch}{3em}
+\renewcommand{\arraystretch}{1.25}
+\newcommand{\thdr}[1]{\cellcolor{utegreen}\textcolor{white}{\textbf{#1}}}
+\newcommand{\bhdr}[1]{\cellcolor{midblue}\textcolor{white}{\textbf{#1}}}
+\newcommand{\seccion}[1]{\section{\textcolor{utegreendk}{#1}}}
+\newcommand{\subseccion}[1]{\subsection{\textcolor{midblue}{#1}}}
+\newcommand{\tarea}[1]{\section*{\textcolor{utegreendk}{#1}}}
+\newcommand{\apartado}[1]{\subsection*{\textcolor{midblue}{#1}}}
+\renewcommand{\thesection}{\arabic{section}.}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}.}
+\newtcolorbox{cajaclave}[1][]{colback=boxgray,colframe=utegreen,boxrule=0.8pt,arc=2mm,fonttitle=\bfseries,breakable,#1}
+\newtcolorbox{cajaaviso}[1][]{colback=lightgold,colframe=gold!80!black,boxrule=0.8pt,arc=2mm,fonttitle=\bfseries,breakable,#1}
+\newtcolorbox{cajatarea}[1][]{colback=white,colframe=midblue,boxrule=0.7pt,arc=1.5mm,fonttitle=\bfseries,coltitle=white,colbacktitle=midblue,breakable,#1}
+
+\begin{document}
+\noindent\includegraphics[width=\linewidth]{logoband.png}
+\vspace{6pt}
+\begin{center}
+{\large Facultad de Ciencias de la Computación \,$\cdot$\, Carrera de Software}\\[9pt]
+{\LARGE\textbf{\textcolor{utegreendk}{EV-SUM-01}}}\\[4pt]
+{\Large\textbf{Evaluación sumativa de la Unidad I}}\\[3pt]
+{\normalsize Caso de estudio: Sistema de Alerta temprana de Crecidas «Alertario»}
+\end{center}
+\noindent\textcolor{gold}{\rule{\linewidth}{1.5pt}}
+\vspace{5pt}
+
+\noindent\begin{tabularx}{\linewidth}{|L{0.26\linewidth}|Y|}
+\hline
+\bhdr{Campo} & \bhdr{Dato del manuscrito}\\\hline
+Plantel & Uteq\\\hline
+\rowcolor{rowgray} Alumno & Cedeño Avila Winston Damian\\\hline
+Fecha & 18/11/2026\\\hline
+\rowcolor{rowgray} Curso/Año Básico & 4to\\\hline
+Paralelo & B\\\hline
+\end{tabularx}
+
+\vspace{3pt}
+Esta es la transcripción fiel de la prueba escrita a mano el 18/11/2026; las fotografías de las hojas están en la carpeta \texttt{evidencias/} del repositorio.
+
+\tarea{T1. Conceptos aplicados al Caso}
+\textbf{a.} Es una necesidad o condición que debe cumplir un sistema para satisfacer a sus necesidades.\par
+\textbf{E7:} No es un requisito de Producto describe como se mide Actualmente el río.\par
+\textbf{E12:} No es un requisito de Producto, solo establece donde se organizaran las reuniones y quien firmara el Acta de requisitos.
+
+\apartado{b. Documentos}
+\small
+\noindent\begin{tabularx}{\linewidth}{|L{0.18\linewidth}|L{0.31\linewidth}|Y|}
+\hline
+\thdr{Documento} & \thdr{Descripción} & \thdr{Ejemplo}\\\hline
+StRS & Necesidades de los interesados & E1: recibir avisos a tiempo para evacuar.\\\hline
+\rowcolor{rowgray} SyRS & Requisito del Sistema completo & E6: Seguir registrando durante cortes de 12 horas\\\hline
+SRS & Requisito especifico del Software & E5: Generar informes mensuales en PDF\\\hline
+\end{tabularx}
+\normalsize
+
+\apartado{c. Actividades}
+\small
+\noindent\begin{tabularx}{\linewidth}{|L{0.16\linewidth}|Y|L{0.24\linewidth}|}
+\hline
+\thdr{Hecho} & \thdr{Actividad} & \thdr{Pohl}\\\hline
+H1 & Elicitación & Central\\\hline
+\rowcolor{rowgray} H2 & análisis y negociación & Central\\\hline
+H3 & Especificación o documentación & Central\\\hline
+\rowcolor{rowgray} H4 & Validación & transversal\\\hline
+H5 & Gestión de cambios & transversal\\\hline
+\end{tabularx}
+\normalsize
+
+\tarea{T2. Clasificación y auditoría}
+\apartado{a. Clasificación}
+{\footnotesize\renewcommand{\arraystretch}{1.03}
+\begin{longtable}{|L{0.055\linewidth}|L{0.22\linewidth}|L{0.17\linewidth}|L{0.43\linewidth}|}
+\hline
+\thdr{ID} & \thdr{Tipo} & \thdr{Documento} & \thdr{Justificación}\\\hline\endfirsthead
+\hline\thdr{ID} & \thdr{Tipo} & \thdr{Documento} & \thdr{Justificación}\\\hline\endhead
+E1 & Funcional & StRS & El usuario final tiene una necesidad por lo que nos da un RF.\\\hline
+\rowcolor{rowgray} E2 & Dominio & SyRS & El UF demostró dominio en su área\\\hline
+E3 & Restricción tecnologica & SyRS & Nos dan una restricción técnica desde TIC\\\hline
+\rowcolor{rowgray} E4 & Restricción & Plan de Proyecto & Nos dan un tiempo límite y de presupuesto\\\hline
+E5 & Funcional & SRS & el enunciado describe un RF\\\hline
+\rowcolor{rowgray} E6 & RNF: Fiabilidad & SyRS & el enunciado describe un RNF de fiabilidad\\\hline
+E7 & No es requisito & Registro & No nos dice nada el enunciado, hace ver que no es un requisito\\\hline
+\rowcolor{rowgray} E8 & RNF: eficiencia de desempeño & SRS & el enunciado muestra un RNF de desempeño al mencionar un límite de tiempo\\\hline
+E9 & Restricción tecnologica & SRS & El enunciado nos restringe con el servidor con de datos y un SO Linux.\\\hline
+\rowcolor{rowgray} E10 & Funcional & SRS & el enunciado nos menciona un RF al decir que el usuario autorizado puede realizar una acciónes\\\hline
+E11 & RNF: capacidad de interacción & SRS & El enunciado nos menciona a un usuario puede usar la app\\\hline
+\rowcolor{rowgray} E12 & Requisito de proceso & Plan de Proyecto & el enunciado da entender es un RP donde depende de un grupo\\\hline
+\end{longtable}}
+
+\apartado{b. Auditoría}
+{\footnotesize\renewcommand{\arraystretch}{1.03}
+\begin{longtable}{|L{0.05\linewidth}|L{0.155\linewidth}|L{0.20\linewidth}|L{0.20\linewidth}|L{0.235\linewidth}|}
+\hline
+\thdr{ID} & \thdr{Término} & \thdr{Característica 29148 que incumple} & \thdr{Propiedad SMART que incumple} & \thdr{Justificación}\\\hline\endfirsthead
+\hline\thdr{ID} & \thdr{Término} & \thdr{Característica 29148 que incumple} & \thdr{Propiedad SMART que incumple} & \thdr{Justificación}\\\hline\endhead
+B1 & «veloz e intuitivo» & No ambiguo, singular y verificable & Specific, Measurable & al decir veloz no define que tan veloz o que tan intuitivo puede ser el sistema\\\hline
+\rowcolor{rowgray} B2 & «suficiente anticipación peligroso» & No ambiguo y verificable & Specific, Measurable & que tan anticipada puede ser la alerta\\\hline
+B3 & «todos los puntos en todo tiempo» & Factible y verificable & attainable, realisable & un sistema necesita mantenimiento no puede ser para siempre\\\hline
+\rowcolor{rowgray} B4 & Firebase sin real sustento & Necesario & traceable & la elección de FB no tiene una necesidad documentada que lo respalde\\\hline
+B5 & «en lo posible, etc» & Completo, no ambiguo y verificable & Specific, Measurable & el sistema puede tener pdf o Excel si es posible realizarlo\\\hline
+\rowcolor{rowgray} B6 & Sin defectos evidente & Bien formado según 5.2.4 & cumple los criterios aplicables & Nos define condición, acción, destinatario y tiempo max\\\hline
+\end{longtable}}
+\end{document}
