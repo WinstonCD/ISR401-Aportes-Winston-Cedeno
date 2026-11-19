@@ -1,6 +1,6 @@
 # Aportes individuales — Ingeniería de Requerimientos (ISR-401)
 
-Repositorio personal de **Cedeño Avila Winston Damian**, estudiante de la carrera de Software de la Universidad Técnica Estatal de Quevedo.
+Repositorio académico de **Cedeño Avila Winston Damian**, estudiante de Software de la Universidad Técnica Estatal de Quevedo.
 
 ## Datos académicos
 
@@ -11,17 +11,15 @@ Repositorio personal de **Cedeño Avila Winston Damian**, estudiante de la carre
 | Carrera | Software |
 | Nivel y paralelo | Cuarto nivel, paralelo B |
 | Asignatura | Ingeniería de Requerimientos (ISR-401) |
-| Período académico | 2026–2027 SPA |
+| Período | 2026–2027 SPA |
 
-## Evaluaciones
+## Evaluación de la Unidad I
 
-| Código de entrega | Actividad | Documentación |
-| --- | --- | --- |
-| EV-SUM-01 | EV-PRAC-01 - SUM - Proceso de requisitos y el framework de IR. Resolver el problema | [Carpeta EV-PRAC-01](EV-PRAC-01/) |
+| Código de la prueba | Actividad | Código de entrega | Documentación |
+| --- | --- | --- | --- |
+| EV-PRAC-01 | Proceso de requisitos y el framework de IR. Resolver el problema | EV-SUM-01 | [EV-PRAC-01](EV-PRAC-01/) |
 
-**Identificación de los códigos:** `EV-SUM-01` corresponde a la actividad de entrega en el SGA; `EV-PRAC-01` identifica la prueba práctica en la guía; `EV-CUE-01` identifica el cuestionario en línea que complementa la evaluación.
-
-## Estructura del repositorio
+## Organización
 
 ```text
 ISR401-Aportes-Winston-Cedeno/
@@ -37,11 +35,7 @@ ISR401-Aportes-Winston-Cedeno/
     └── logoband.png
 ```
 
-## Criterios de presentación
-
-La evaluación se realizó por escrito. Las fotografías de las hojas se conservan en `EV-PRAC-01/evidencias/`. `main.tex` contiene la transcripción de las respuestas manuscritas y `main.pdf` es el documento generado desde ese archivo LaTeX; las fotografías se mantienen separadas del PDF.
-
-El archivo [README de EV-PRAC-01](EV-PRAC-01/README.md) explica el contenido de la actividad, la compilación reproducible y las indicaciones de entrega. El PDF de una página destinado al SGA es diferente de `main.pdf`, que corresponde a la digitalización de la prueba.
+En la carpeta [EV-PRAC-01](EV-PRAC-01/) se conservan las fotografías de la prueba, su transcripción en LaTeX y el PDF generado. Las instrucciones de compilación y la información de entrega están en el README específico de la actividad.
 
 ## Repositorio
 
